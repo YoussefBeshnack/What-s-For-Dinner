@@ -1,0 +1,303 @@
+html,
+body,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffdbd2 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: 0 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffdbd2;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #b46653;
+}
+
+/* ================= Sizes ================= */
+/* w */
+.w-1\.5rem {
+  width: 1.5rem;
+}
+.w-2rem {
+  width: 2rem;
+}
+.w-2\.5rem {
+  width: 2.5rem;
+}
+.w-3rem {
+  width: 3rem;
+}
+
+/* h */
+.h-1\.5rem {
+  height: 1.5rem;
+}
+.h-2rem {
+  height: 2rem;
+}
+.h-350p {
+  height: 350px;
+}
+.h-400p {
+  height: 400px;
+}
+.h-750p {
+  height: 750px;
+}
+.h-2\.5rem {
+  height: 2.5rem;
+}
+.h-3rem {
+  height: 3rem;
+}
+
+/* fs */
+.fs-0\.75rem {
+  font-size: 0.75rem;
+}
+.fs-0\.875rem {
+  font-size: 0.875rem;
+}
+.fs-normal {
+  font-size: 1rem;
+}
+
+/* ================= Positions ================= */
+.top-1\.5 {
+  top: 1.5rem;
+}
+.left-1\.5 {
+  left: 1.5rem;
+}
+.bottom-1\.5 {
+  bottom: 1.5rem;
+}
+.right-1\.5 {
+  right: 1.5rem;
+}
+
+/* ================= Other ================= */
+/* cursor */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Gradient */
+.bg-orange-gradient {
+  background-image: linear-gradient(to left, #fb2c36, #ff6900);
+}
+
+/* ================= Bootstrap ================= */
+/* bg */
+.bg-beige {
+  --bs-bg-opacity: 1;
+  background-color: rgba(252, 249, 231, var(--bs-bg-opacity)) !important;
+}
+.bg-amber-50 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 251, 235, var(--bs-bg-opacity)) !important;
+}
+.bg-red-50 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(254, 242, 242, var(--bs-bg-opacity)) !important;
+}
+.bg-red-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 226, 226, var(--bs-bg-opacity)) !important;
+}
+.bg-gray-50 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--bs-bg-opacity)) !important;
+}
+.bg-orange-50 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 247, 237, var(--bs-bg-opacity)) !important;
+}
+.bg-orange-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 237, 212, var(--bs-bg-opacity)) !important;
+}
+.bg-orange-500 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(255, 105, 0, var(--bs-bg-opacity)) !important;
+}
+.bg-blue-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(219, 234, 254, var(--bs-bg-opacity)) !important;
+}
+.bg-yellow-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(254, 249, 194, var(--bs-bg-opacity)) !important;
+}
+.bg-green-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(220, 252, 231, var(--bs-bg-opacity)) !important;
+}
+.bg-pink-100 {
+  --bs-bg-opacity: 1;
+  background-color: rgba(252, 231, 243, var(--bs-bg-opacity)) !important;
+}
+
+/* text */
+.text-red-500 {
+  --bs-text-opacity: 1;
+  color: rgba(251, 44, 54, var(--bs-text-opacity)) !important;
+}
+.text-red-600 {
+  --bs-text-opacity: 1;
+  color: rgba(231, 0, 11, var(--bs-text-opacity)) !important;
+}
+.text-red-800 {
+  --bs-text-opacity: 1;
+  color: rgba(159, 7, 18, var(--bs-text-opacity)) !important;
+}
+.text-orange-500 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 105, 0, var(--bs-text-opacity)) !important;
+}
+.text-orange-600 {
+  --bs-text-opacity: 1;
+  color: rgba(245, 73, 0, var(--bs-text-opacity)) !important;
+}
+.text-blue-500 {
+  --bs-text-opacity: 1;
+  color: rgba(43, 127, 255, var(--bs-text-opacity)) !important;
+}
+.text-blue-600 {
+  --bs-text-opacity: 1;
+  color: rgba(21, 93, 251, var(--bs-text-opacity)) !important;
+}
+.text-yellow-600 {
+  --bs-text-opacity: 1;
+  color: rgba(208, 135, 0, var(--bs-text-opacity)) !important;
+}
+.text-green-600 {
+  --bs-text-opacity: 1;
+  color: rgba(0, 166, 62, var(--bs-text-opacity)) !important;
+}
+.text-pink-600 {
+  --bs-text-opacity: 1;
+  color: rgba(230, 0, 118, var(--bs-text-opacity)) !important;
+}
+.text-amber-600 {
+  --bs-text-opacity: 1;
+  color: rgba(225, 113, 0, var(--bs-text-opacity)) !important;
+}
+
+/* border */
+.border-orange-100 {
+  --bs-border-color: #ffedd4 !important;
+}
+.border-orange-300 {
+  --bs-border-color: #ffb86a !important;
+}
+.border-red-500 {
+  --bs-border-color: #fb2c36 !important;
+}
+.border-amber-400 {
+  --bs-border-color: #ffb900 !important;
+}
+
+/* btn */
+.btn-orange {
+  --bs-btn-color: #f54a00;
+  --bs-btn-bg: #ffedd4;
+  --bs-btn-border-color: #ffedd4;
+  --bs-btn-hover-color: #f54a00;
+  --bs-btn-hover-bg: #ffd7a8;
+  --bs-btn-hover-border-color: #ffd7a8;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #f54a00;
+  --bs-btn-active-bg: #ffd7a8;
+  --bs-btn-active-border-color: #ffd7a8;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #f54a00;
+  --bs-btn-disabled-bg: #ffedd4;
+  --bs-btn-disabled-border-color: #ffedd4;
+}
+
+/* nav */
+.nav-underline .nav-link.active {
+  --bs-nav-underline-link-active-color: #f54a00 !important;
+}
+
+.nav-text-secondary {
+  --bs-nav-link-color: #364153;
+}
+
+.nav-fw-semibold {
+  --bs-nav-link-font-weight: 600;
+}
+
+/* Custom Classes */
+/* tags */
+.tag {
+  background-color: var(--tag-bgc);
+  color: var(--tag-color);
+  font-weight: 600;
+  font-size: 0.75rem;
+  border-radius: 1000000px;
+  padding: 0.25rem 0.75rem;
+}
+.tag-green {
+  --tag-bgc: #dcfce7;
+  --tag-color: #008236;
+}
+.tag-blue {
+  --tag-bgc: #dbeafe;
+  --tag-color: #1447e6;
+}
+
+.btn-effects {
+  transition: all 0.3s;
+}
+.btn-effects:hover {
+  scale: 1.05;
+  background-image: linear-gradient(to left, #e7000b, #f54900);
+}
+
+/* Media */
+@media (max-width: 992px) {
+  /* fs */
+  .fs-sm-0\.75rem {
+    font-size: 0.75rem !important;
+  }
+  .fs-sm-0\.875rem {
+    font-size: 0.875rem !important;
+  }
+  .fs-sm-normal {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* fs */
+  .fs-md-0\.75rem {
+    font-size: 0.75rem !important;
+  }
+  .fs-md-0\.875rem {
+    font-size: 0.875rem !important;
+  }
+  .fs-md-normal {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 992px) {
+  .h-lg-750p {
+    height: 750px;
+  }
+
+  .h-lg-100 {
+    height: 100%;
+  }
+}

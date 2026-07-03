@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.png" />
+    <title>What's For Dinner</title>
+  </head>
+  <body class="bg-beige">
+    <!-- Nav -->
+    <nav
+      class="navbar sticky-top navbar-expand-lg py-3 border-bottom border-1 border-orange-100 shadow-sm bg-white"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <div class="d-flex">
+          <div
+            class="w-3rem h-3rem bg-orange-gradient rounded-circle d-flex justify-content-center shadow me-3"
+          >
+            <i
+              class="fa-solid fa-utensils text-white align-self-center fs-5"
+            ></i>
+          </div>
+
+          <!-- Text -->
+          <div>
+            <h1 class="fs-4 fw-bold mb-0">What's For Dinner</h1>
+            <div class="text-secondary fs-0.875rem">
+              Your daily meal inspiration
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="navbar-nav ms-auto mb-2 mb-lg-0 mt-3 mt-lg-0 d-flex align-items-lg-center gap-2 gap-lg-3 fs-5 text-secondary"
+          >
+            <div class="nav-item mt-3 mt-lg-0">
+              <i class="fa-solid fa-bookmark"></i>
+              <span class="d-lg-none fs-normal">Saved Recipes</span>
+            </div>
+            <div class="nav-item">
+              <i class="fa-solid fa-history"></i>
+              <span class="d-lg-none fs-normal">Recent</span>
+            </div>
+            <div class="nav-item">
+              <i class="fa-solid fa-gear"></i>
+              <span class="d-lg-none fs-normal">Settings</span>
+            </div>
+            <div class="d-flex">
+              <div
+                class="d-inline-block w-2.5rem h-2.5rem rounded-circle border border-1 border-orange-300 overflow-hidden cursor-pointer"
+              >
+                <img
+                  src="assets/avatar-4.jpg"
+                  alt="profile picture"
+                  class="w-100 h-100 d-inline-block"
+                />
+              </div>
+              <span class="d-lg-none fs-normal align-self-center ms-2"
+                >Profile</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container py-4 g-5">
+      <section
+        class="bg-white rounded-5 shadow-lg overflow-hidden mb-8 border border-1 border-orange-100"
+      >
+        <div class="d-flex flex-column flex-lg-row h-lg-750p">
+          <!-- Image -->
+          <div class="h-400p h-lg-100 col-lg-5 position-relative">
+            <img
+              id="image"
+              src=""
+              alt=""
+              class="h-100 w-100 object-fit-cover"
+            />
+            <!-- top left -->
+            <div
+              class="position-absolute top-1.5 left-1.5 bg-white rounded-pill px-3 py-2 shadow-lg"
+            >
+              <div class="d-flex align-items-center gap-2">
+                <i class="fa-solid fa-star text-warning"></i>
+                <span id="rating" class="fw-semibold">4.7</span>
+                <span id="reviews" class="text-secondary fs-0.875rem"
+                  >(389 reviews)</span
+                >
+              </div>
+            </div>
+
+            <!-- bottom -->
+            <div
+              class="position-absolute bottom-1.5 left-1.5 right-1.5 bg-white rounded-5 p-3 p-lg-4 shadow-lg"
+            >
+              <div class="d-flex gap-4 flex-nowrap text-center">
+                <div class="w-100">
+                  <i
+                    class="text-orange-500 fs-3 fs-sm-normal mb-1 fa-solid fa-clock"
+                  ></i>
+                  <p class="fs-0.875rem fs-sm-0.75rem text-secondary m-0">
+                    Prep Time
+                  </p>
+                  <p id="prep-time" class="fw-bold fs-sm-0.875rem m-0">
+                    20 min
+                  </p>
+                </div>
+                <div class="w-100">
+                  <i
+                    class="text-red-500 fs-3 fs-sm-normal mb-1 fa-solid fa-fire-burner"
+                  ></i>
+                  <p class="fs-0.875rem fs-sm-0.75rem text-secondary m-0">
+                    Cook Time
+                  </p>
+                  <p id="cook-time" class="fw-bold fs-sm-0.875rem m-0">
+                    30 min
+                  </p>
+                </div>
+                <div class="w-100">
+                  <i
+                    class="text-blue-500 fs-3 fs-sm-normal mb-1 fa-solid fa-users"
+                  ></i>
+                  <p class="fs-0.875rem fs-sm-0.75rem text-secondary m-0">
+                    Servings
+                  </p>
+                  <p id="serving" class="fw-bold fs-sm-0.875rem m-0">
+                    4 people
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="overflow-y-auto col-lg-7 p-3 p-lg-5">
+            <!-- Title -->
+            <div
+              class="d-flex flex-column flex-lg-row align-items-start justify-content-between mb-3 gap-3"
+            >
+              <!-- Meal Title + Tags -->
+              <div>
+                <!-- Tags -->
+                <div class="d-flex align-items-center mb-3">
+                  <span id="difficulty" class="tag tag-green me-2"
+                    >Intermediate</span
+                  >
+                  <span id="region" class="tag tag-blue">Asian</span>
+                </div>
+                <!-- Meal Name -->
+                <h2 id="name" class="fw-bold">Chicken Tikka Masala</h2>
+                <!-- Meal Description -->
+                <p id="description" class="fs-0.875rem text-secondary">
+                  Rich and creamy indian curry with tender chicken pieces
+                </p>
+              </div>
+
+              <!-- Icons -->
+              <div
+                class="order-first order-lg-0 align-self-end align-self-lg-center d-flex"
+              >
+                <!-- Icon 1 -->
+                <button class="btn btn-orange w-3rem h-3rem me-2">
+                  <i class="fa-solid fa-bookmark"></i>
+                </button>
+
+                <!-- Icon 2 -->
+                <button class="btn btn-orange w-3rem h-3rem">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Time Warning -->
+            <div
+              id="time-warning"
+              class="border-start border-4 border-red-500 bg-red-50 p-3 mb-4 rounded-3"
+            >
+              <div class="d-flex align-items-center">
+                <i class="fa-solid fa-warning text-red-500 fs-5 me-3"></i>
+                <div>
+                  <p class="fw-semibold text-red-800 fs-0.875rem m-0">
+                    Extended Preparation Time
+                  </p>
+                  <p class="fs-0.75rem text-red-600 m-0">
+                    This recipe requires more than 45 minutes to prepare. Plan
+                    accordingly!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabs -->
+            <nav>
+              <div
+                class="nav nav-underline flex-nowrap p-3 mb-4 border-bottom border-1 border-secondary border-opacity-25"
+                id="nav-tab"
+                role="tablist"
+              >
+                <button
+                  class="nav-link active w-100 fs-sm-0.75rem nav-text-secondary fw-semibold pt-0 pb-1"
+                  id="nav-ingredients-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-ingredients"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-ingredients"
+                  aria-selected="true"
+                >
+                  <i class="fa-solid fa-list-check"></i>
+                  <span class="text-nowrap">Ingredients</span>
+                </button>
+                <button
+                  class="nav-link w-100 fs-sm-0.75rem nav-text-secondary fw-semibold pt-0 pb-1"
+                  id="nav-instructions-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-instructions"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-instructions"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="text-nowrap">Instructions</span>
+                </button>
+                <button
+                  class="nav-link w-100 fs-sm-0.75rem nav-text-secondary fw-semibold pt-0 pb-1"
+                  id="nav-nutrition-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-nutrition"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-nutrition"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-chart-pie"></i>
+                  <span class="text-nowrap">Nutrition</span>
+                </button>
+                <button
+                  class="nav-link w-100 fs-sm-0.75rem nav-text-secondary fw-semibold pt-0 pb-1"
+                  id="nav-tips-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-tips"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-tips"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <span class="text-nowrap">Chef's Tips</span>
+                </button>
+              </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+              <!-- Ingredients -->
+              <div
+                class="tab-pane fade h-350p overflow-y-auto bg-orange-50 p-4 rounded-4 show active"
+                id="nav-ingredients"
+                role="tabpanel"
+                aria-labelledby="nav-ingredients-tab"
+                tabindex="0"
+              >
+                <ul id="ingredients" class="m-0 p-0">
+                  <li class="d-flex align-items-start mb-3">
+                    <div
+                      class="w-1.5rem h-1.5rem me-2 bg-orange-500 rounded-circle d-flex align-items-center justify-content-center text-white fw-bold flex-shrink-0"
+                    >
+                      1
+                    </div>
+                    <span>600g chicken breast, cubed</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <div
+                      class="w-1.5rem h-1.5rem me-2 bg-orange-500 rounded-circle d-flex align-items-center justify-content-center text-white fw-bold flex-shrink-0"
+                    >
+                      2
+                    </div>
+                    <span>1 cup plain yogurt</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Instructions -->
+              <div
+                class="tab-pane fade h-350p overflow-y-auto rounded-4"
+                id="nav-instructions"
+                role="tabpanel"
+                aria-labelledby="nav-instructions-tab"
+                tabindex="0"
+              >
+                <!-- instructions -->
+                <div id="instructions" class="d-flex flex-column gap-3">
+                  <!-- instruction -->
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="w-3rem h-3rem bg-orange-500 rounded-4 d-flex align-items-center justify-content-center text-white fs-4 fw-bold me-3 flex-shrink-0"
+                    >
+                      1
+                    </div>
+                    <div class="flex-grow-1 pt-1">
+                      <p>
+                        Marinate chicken in half the yogurt and 1 tablespoon
+                        tikka paste for at least 30 minutes.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- instruction -->
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="w-3rem h-3rem bg-orange-500 rounded-4 d-flex align-items-center justify-content-center text-white fs-4 fw-bold me-3 flex-shrink-0"
+                    >
+                      2
+                    </div>
+                    <div class="flex-grow-1 pt-1">
+                      <p>
+                        Heat oil in a large pan, cook marinated chicken until
+                        browned. Remove and set aside.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nutrition -->
+              <div
+                class="tab-pane fade h-350p overflow-y-auto rounded-4"
+                id="nav-nutrition"
+                role="tabpanel"
+                aria-labelledby="nav-nutrition-tab"
+                tabindex="0"
+              >
+                <!-- Nutritions List -->
+                <div class="overflow-hidden">
+                  <div class="row g-3">
+                    <!-- Calories -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-orange-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i class="fa-solid fa-fire text-orange-600"></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem">Calories</span>
+                        </div>
+                        <span id="calories" class="fw-bold fs-5 fs-md-normal"
+                          >450 kcal</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Protein -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-blue-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i class="fa-solid fa-dumbbell text-blue-600"></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem">Protein</span>
+                        </div>
+                        <span id="protein" class="fw-bold fs-5 fs-md-normal"
+                          >38g</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Carbohydrates -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-yellow-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i
+                              class="fa-solid fa-wheat-awn text-yellow-600"
+                            ></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem"
+                            >Carbohydrates</span
+                          >
+                        </div>
+                        <span
+                          id="carbohydrates"
+                          class="fw-bold fs-5 fs-md-normal"
+                          >24g</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Fat -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-red-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i class="fa-solid fa-droplet text-red-600"></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem">Fat</span>
+                        </div>
+                        <span id="fat" class="fw-bold fs-5 fs-md-normal"
+                          >22g</span
+                        >
+                      </div>
+                    </div>
+                    <!-- Fiber -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-green-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i class="fa-solid fa-seedling text-green-600"></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem">Fiber</span>
+                        </div>
+                        <span id="fiber" class="fw-bold fs-5 fs-md-normal"
+                          >4g</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Sodium -->
+                    <div class="col-lg-6">
+                      <div
+                        class="d-flex align-items-center justify-content-between p-3 bg-gray-50 rounded-4"
+                      >
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="w-2.5rem h-2.5rem bg-pink-100 rounded-4 d-flex align-items-center justify-content-center me-2"
+                          >
+                            <i class="fa-solid fa-cube text-pink-600"></i>
+                          </div>
+                          <span class="fw-medium fs-md-0.75rem">Sodium</span>
+                        </div>
+                        <span id="sodium" class="fw-bold fs-5 fs-md-normal"
+                          >760mg</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chef's Tips -->
+              <div
+                class="tab-pane fade h-350p overflow-y-auto rounded-4"
+                id="nav-tips"
+                role="tabpanel"
+                aria-labelledby="nav-tips-tab"
+                tabindex="0"
+              >
+                <!-- tips list -->
+                <div id="tips">
+                  <!-- tip -->
+                  <div
+                    class="d-flex align-items-start p-3 bg-amber-50 rounded-4 border-start border-4 border-amber-400 mb-3"
+                  >
+                    <i
+                      class="fa-solid fa-circle-check text-amber-600 fs-4 me-3 mt-1"
+                    ></i>
+                    <p class="m-0">
+                      Marinate chicken overnight for deeper flavor
+                    </p>
+                  </div>
+
+                  <!-- tip -->
+                  <div
+                    class="d-flex align-items-start p-3 bg-amber-50 rounded-4 border-start border-4 border-amber-400 mb-3"
+                  >
+                    <i
+                      class="fa-solid fa-circle-check text-amber-600 fs-4 me-3 mt-1"
+                    ></i>
+                    <p class="m-0">
+                      Marinate chicken overnight for deeper flavor
+                    </p>
+                  </div>
+
+                  <!-- tip -->
+                  <div
+                    class="d-flex align-items-start p-3 bg-amber-50 rounded-4 border-start border-4 border-amber-400 mb-3"
+                  >
+                    <i
+                      class="fa-solid fa-circle-check text-amber-600 fs-4 me-3 mt-1"
+                    ></i>
+                    <p class="m-0">
+                      Marinate chicken overnight for deeper flavor
+                    </p>
+                  </div>
+
+                  <!-- tip -->
+                  <div
+                    class="d-flex align-items-start p-3 bg-amber-50 rounded-4 border-start border-4 border-amber-400 mb-3"
+                  >
+                    <i
+                      class="fa-solid fa-circle-check text-amber-600 fs-4 me-3 mt-1"
+                    ></i>
+                    <p class="m-0">
+                      Marinate chicken overnight for deeper flavor
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- recipies button -->
+            <div
+              class="d-flex align-items-center mt-4 pt-4 border-top border-1 border-secondary border-opacity-25"
+            >
+              <button
+                class="btn-effects btn btn-orange bg-orange-gradient fw-semibold shadow-lg text-white rounded-4 px-lg-4 py-lg-3"
+                onclick="showAnotherRecipie()"
+              >
+                <i class="fa-solid fa-rotate"></i>
+                Try Another Recipie
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
