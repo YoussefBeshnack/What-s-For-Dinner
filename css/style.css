@@ -98,6 +98,13 @@ body {
 
 /* Gradient */
 .bg-orange-gradient {
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#fb2c36),
+    to(#ff6900)
+  );
   background-image: linear-gradient(to left, #fb2c36, #ff6900);
 }
 
@@ -263,10 +270,18 @@ body {
 }
 
 .btn-effects {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .btn-effects:hover {
   scale: 1.05;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#e7000b),
+    to(#f54900)
+  );
   background-image: linear-gradient(to left, #e7000b, #f54900);
 }
 
