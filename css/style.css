@@ -23,6 +23,10 @@ body,
   background-color: #b46653;
 }
 
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
 /* ================= Sizes ================= */
 /* w */
 .w-1\.5rem {
